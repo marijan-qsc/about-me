@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills – Marijan Grgic</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #1e1e2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(35, 90, 241);
+            border: none;
+            border-radius: 50%; /* Rund */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgb(35, 90, 241);
+        }
+        
+        .skills-container {
+            background: #2a2a3a;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 500px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .skill {
+            margin: 10px 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .level {
+            font-size: 14px;
+            color: #ff9800;
+        }
+
+        .progress-container {
+            width: 100%;
+            background-color: #3a3a4a;
+            border-radius: 5px;
+            margin-top: 5px;
+            height: 12px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .franz { width: 60%; background-color: #ff9800; }
+        .engl { width: 80%; background-color: #4caf50; }
+        .deut { width: 100%; background-color: #3f51b5; }
+        .kroa { width: 100%; background-color: #2196f3; }
+
+        .languages-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .language-bubble {
+            width: 60px;
+            height: 60px;
+            background-color: #3a3a4a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .language-bubble:hover {
+            transform: scale(1.2);
+        }
+
+        .language-bubble img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="window.history.back()">🠔</button>
+
+    <div class="skills-container">
+        <h2>Meine Sprachkenntnisse</h2>
+        <div class="skill">
+            Französisch
+            <div class="level">B1</div>
+            <div class="progress-container">
+                <div class="progress-bar franz"></div>
+            </div>
+        </div>
+        <div class="skill">
+            Englisch
+            <div class="level">C1</div>
+            <div class="progress-container">
+                <div class="progress-bar engl"></div>
+            </div>
+        </div>
+        <div class="skill">
+            Deutsch
+            <div class="level">C2</div>
+            <div class="progress-container">
+                <div class="progress-bar deut"></div>
+            </div>
+        </div>
+        <div class="skill">
+            Kroatisch
+            <div class="level">C2</div>
+            <div class="progress-container">
+                <div class="progress-bar kroa"></div>
+            </div>
+        </div>
+
+        <h2>Meine Programmierkenntnisse</h2>
+        <div class="languages-container">
+            <div class="language-bubble">
+                <img src="https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Other-html-5-icon.png" alt="HTML Logo">
+            </div>
+            <div class="language-bubble">
+                <img src="https://img.icons8.com/?size=512&id=21278&format=png" alt="CSS Logo">
+            </div>
+            <div class="language-bubble">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/free-python-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945099.png?f=webp&w=256" alt="Python Logo">
+            </div>
+            <div class="language-bubble">
+                <img src="https://static.vecteezy.com/system/resources/previews/027/127/463/non_2x/javascript-logo-javascript-icon-transparent-free-png.png" alt="JavaScript Logo">
+            </div>
+            <div class="language-bubble">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/74/Kotlin_Icon.png" alt="Kotlin Logo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

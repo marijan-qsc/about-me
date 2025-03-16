@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Marijan Grgic</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #1e1e2e;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(35, 90, 241);
+            border: none;
+            border-radius: 50%; /* Rund */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: rgb(35, 90, 241);
+        }
+
+        .contact-container {
+            background: #2a2a3a;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            margin: 8px 0;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        input, textarea {
+            background: #3a3a4a;
+            color: white;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            background: rgb(35, 90, 241);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: rgb(35, 90, 241);
+        }
+
+        .email-link {
+            display: block;
+            margin-top: 12px;
+            color: rgb(35, 90, 241);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-button" onclick="window.history.back()">🠔</button>
+
+    <div class="contact-container">
+        <h2>Kontakt</h2>
+        <p>Marijan Grgic<br>Stöttwang, Bayern, Deutschland</p>
+        <form action="mailto:marijan.grgic@icloud.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Dein Name" required>
+            <input type="email" name="email" placeholder="Deine Email" required>
+            <textarea name="message" rows="4" placeholder="Deine Nachricht" required></textarea>
+            <button type="submit">Senden</button>
+        </form>
+    </div>
+
+</body>
+</html>
